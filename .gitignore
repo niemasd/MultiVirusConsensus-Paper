@@ -1,6 +1,8 @@
 # paper-related files
 *.fastq
 *.fastq.*
+*.fq
+*.fq.gz
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
