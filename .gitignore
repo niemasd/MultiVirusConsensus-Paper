@@ -1,3 +1,7 @@
+# paper-related files
+*.fastq
+*.fastq.*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
