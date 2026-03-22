@@ -1,0 +1,18 @@
+[2026-03-22 16:36:06] === MultiVirusConsensus (MVC) v0.0.5 ===
+[2026-03-22 16:36:06] Command: /home/niema/MultiVirusConsensus/MultiVirusConsensus.py -r references.fas -o simulated/simulated.output -i simulated/simulated1.fq simulated/simulated2.fq
+[2026-03-22 16:36:06] Input Viral Reads: simulated/simulated1.fq	simulated/simulated2.fq
+[2026-03-22 16:36:06] Viral Reference FASTA: references.fas
+[2026-03-22 16:36:06] BioBloom Filter: None
+[2026-03-22 16:36:06] Output Directory: simulated/simulated.output
+[2026-03-22 16:36:06] What to Keep for Multimapped Reads: all
+[2026-03-22 16:36:06] Number of Threads for Minimap2/Samtools/BioBloom: 8
+[2026-03-22 16:36:06] BioBloom Categorizer Path: biobloomcategorizer
+[2026-03-22 16:36:06] Minimap2 Path: minimap2
+[2026-03-22 16:36:06] Minimap2 Arguments: -x sr
+[2026-03-22 16:36:06] Samtools Path: samtools
+[2026-03-22 16:36:06] ViralConsensus Path: viral_consensus
+[2026-03-22 16:36:06] ViralConsensus Arguments: 
+[2026-03-22 16:36:06] Writing merged references FASTA: simulated/simulated.output/references.fas
+[2026-03-22 16:36:06] Writing bash script: simulated/simulated.output/run.sh
+[2026-03-22 16:36:06] Running bash script...
+[2026-03-22 16:36:27] MVC execution complete

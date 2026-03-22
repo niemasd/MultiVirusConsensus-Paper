@@ -1,0 +1,18 @@
+[2026-03-22 16:03:09] === MultiVirusConsensus (MVC) v0.0.5 ===
+[2026-03-22 16:03:09] Command: /home/niema/MultiVirusConsensus/MultiVirusConsensus.py -r references.fas -i real/mixed.fastq -o real/mixed.fastq.output
+[2026-03-22 16:03:09] Input Viral Reads: real/mixed.fastq
+[2026-03-22 16:03:09] Viral Reference FASTA: references.fas
+[2026-03-22 16:03:09] BioBloom Filter: None
+[2026-03-22 16:03:09] Output Directory: real/mixed.fastq.output
+[2026-03-22 16:03:09] What to Keep for Multimapped Reads: all
+[2026-03-22 16:03:09] Number of Threads for Minimap2/Samtools/BioBloom: 8
+[2026-03-22 16:03:09] BioBloom Categorizer Path: biobloomcategorizer
+[2026-03-22 16:03:09] Minimap2 Path: minimap2
+[2026-03-22 16:03:09] Minimap2 Arguments: -x sr
+[2026-03-22 16:03:09] Samtools Path: samtools
+[2026-03-22 16:03:09] ViralConsensus Path: viral_consensus
+[2026-03-22 16:03:09] ViralConsensus Arguments: 
+[2026-03-22 16:03:09] Writing merged references FASTA: real/mixed.fastq.output/references.fas
+[2026-03-22 16:03:09] Writing bash script: real/mixed.fastq.output/run.sh
+[2026-03-22 16:03:09] Running bash script...
+[2026-03-22 16:06:57] MVC execution complete
