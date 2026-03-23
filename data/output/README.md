@@ -4,9 +4,9 @@ All benchmarks were run on a 2.8 GHz Intel i7-1165G7 CPU with 16 GB of memory.
 
 Note that the total number of mapped reads (correct + incorrect) can exceed the total number of reads because reads were allowed to multimap. This behavior can be changed in MultiVirusConsensus via the `--keep_multimapped` argument. Specifically, if a given read `x` has multiple good mappings:
 
-* `all` = Keep all of the mappings
-* `best` = Keep the single best mapping
-* `none` = Discard read `x` entirely
+* `all` = Keep all of the mappings of `x`
+* `best` = Keep ony the single best mapping of `x`
+* `none` = Discard `x` entirely
 
 ## Simulated
 
