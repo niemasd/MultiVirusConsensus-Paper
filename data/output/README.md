@@ -2,15 +2,21 @@
 
 All benchmarks were run on a 2.8 GHz Intel i7-1165G7 CPU with 16 GB of memory.
 
+Note that the total number of mapped reads (correct + incorrect) can exceed the total number of reads because reads were allowed to multimap. This behavior can be changed in MultiVirusConsensus via the `--keep_multimapped` argument. Specifically, if a given read `x` has multiple good mappings:
+
+* `all` = Keep all of the mappings
+* `best` = Keep the single best mapping
+* `none` = Discard read `x` entirely
+
 ## Simulated
 
-| File |
-| :--- |
-| TODO |
+| Folder                   | # Reads | # Mapped Correct | # Mapped Incorrect | Time (s) |
+| :----------------------- | ------: | ---------------: | -----------------: | -------: |
+| [`simulated`](simulated) | 797,000 |          796,965 |              7,998 |    21.28 |
 
 ## Real
 
-| File                                               | SRA ID                                                                |   # Reads | # Mapped Correct | # Mapped Incorrect | Time (s) |
+| Folder                                             | SRA ID                                                                |   # Reads | # Mapped Correct | # Mapped Incorrect | Time (s) |
 | :------------------------------------------------- | :-------------------------------------------------------------------- | --------: | ---------------: | -----------------: | -------: |
 | [`HMPV.SRR8776440`](HMPV.SRR8776440)               | [SRR8776440](https://trace.ncbi.nlm.nih.gov/Traces/?run=SRR8776440)   |   962,668 |          481,943 |              3,582 |    36.37 |
 | [`InfluenzaA.SRR37308007`](InfluenzaA.SRR37308007) | [SRR37308007](https://trace.ncbi.nlm.nih.gov/Traces/?run=SRR37308007) | 1,364,614 |          123,430 |                128 |    28.57 |
