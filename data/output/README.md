@@ -1,6 +1,6 @@
 # Summary Statistics
 
-All benchmarks were run on a 2.8 GHz Intel i7-1165G7 CPU with 16 GB of memory.
+All benchmarks were run with MultiVirusConsensus v0.1.0 on a 2.8 GHz Intel i7-1165G7 CPU with 16 GB of memory.
 
 ## Simulated
 
