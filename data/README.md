@@ -3,6 +3,7 @@
 1. [`simulated`](simulated) contains reads simulated from [`references.fas`](references.fas)
 2. [`real`](real) contains real sequencing datasets
 3. [`output`](output) contains MultiVirusConsensus output folders
+4. [`benchmark`](benchmark) contains data related to the runtime/memory benchmark experiment
 
 # Reference Genome Sequences
 
