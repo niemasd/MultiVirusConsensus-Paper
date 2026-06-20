@@ -6,7 +6,7 @@ All benchmarks were run with MultiVirusConsensus v0.1.0 on a 2.8 GHz Intel i7-
 
 | Folder                   | # Reads |     # Bases | Reads Mapped Correct | Reads Mapped Incorrect | Time (s) | Peak Memory (KB) |
 | :----------------------- | ------: | ----------: | -------------------: | ---------------------: | -------: | ---------------: |
-| [`simulated`](simulated) | 797,000 | 119,550,000 |              796,965 |                  7,998 |    21.28 |          456,732 |
+| [`simulated`](simulated) | 797,000 | 119,550,000 |              796,965 |                  7,998 |     9.53 |          446,208 |
 
 ## Real
 
