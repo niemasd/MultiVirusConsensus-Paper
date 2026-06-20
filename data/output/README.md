@@ -1,12 +1,12 @@
 # Summary Statistics
 
-All benchmarks were run with MultiVirusConsensus v0.1.0 on a 2.8 GHz Intel i7-1165G7 CPU with 16 GB of memory.
+All benchmarks were run with MultiVirusConsensus v0.1.0 on a 2.8 GHz Intel i7-1165G7 CPU with 16 GB of memory. Only [proper pairs](https://support.illumina.com/help/DRAGEN_Germline_Pipeline_v337_OLH_1000000083701/content/source/informatics/apps/mapalignmetrics_swbs_appdraggp.htm) were counted as "fragments": "Correct" was defined as both reads in the proper pair mapping to the correct reference, and "Incorrect" was defined as both reads in the proper pair mapping to an incorrect reference.
 
 ## Simulated
 
 | Folder                   | Fragments Mapped Correct | Fragments Mapped Incorrect | Time (s) | Peak Memory (KB) |
 | :----------------------- | -----------------------: | -------------------------: | -------: | ---------------: |
-| [`simulated`](simulated) |                  796,965 |                      7,998 |     9.53 |          446,208 |
+| [`simulated`](simulated) |                  398,465 |                          0 |     9.53 |          446,208 |
 
 ## Real
 
