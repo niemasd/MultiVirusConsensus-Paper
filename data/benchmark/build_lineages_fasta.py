@@ -32,5 +32,5 @@ if __name__ == "__main__":
     print("Writing lineages FASTA...", end=' ')
     with xzopen(LINEAGES_PATH, mode='wt') as f:
         for k, v in assemblies.items():
-            f.write(f"{k}\n{v}\n")
+            f.write(f">{k}\n{v}\n")
     print("done")
