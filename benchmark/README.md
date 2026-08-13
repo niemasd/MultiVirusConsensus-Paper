@@ -31,5 +31,5 @@ for s in $(ls *.fq.gz | cut -d'.' -f1-3 | sort | uniq) ; do for ref in ../refere
 This is what should actually be run to avoid creating a bunch of FASTQ files, which can get quite large.
 
 ```bash
-for x in 1 10 100 1000 ; do for r in $(seq -w 1 10) ; do art_illumina -na -ss HS25 -i ../data/references.fas -p -l 150 -f $x -m 200 -s 10 -o "x$x.r$r." ; /usr/bin/time -v -o $s.time.mvc.txt ~/MultiVirusConsensus/MultiVirusConsensus.py -r ../data/references.fas --keep_multimapped all -i x$x.r$r.*.fq -o "mvc.x$x.r$r" ; echo "RUN IVAR" ; echo "RUN VIRALCONSENSUS" ; rm -f *.fq *.bam */*.bam; done ; done
+for x in 1 10 100 1000 ; do for r in $(seq -w 1 10) ; do art_illumina -na -ss HS25 -i ../data/references.fas -p -l 150 -f $x -m 200 -s 10 -o "x$x.r$r." ; /usr/bin/time -v -o "x$x.r$r.time.mvc.txt" ~/MultiVirusConsensus/MultiVirusConsensus.py -r ../data/references.fas --keep_multimapped all -i x$x.r$r.*.fq -o "x$x.r$r.out.mvc" && for c in x$x.r$r.out.mvc/*.consensus.fas ; do mv "$c" x$x.r$r.consensus.$(basename "$c" | rev | cut -d'.' -f2- | rev).mvc.fas ; done ; echo "RUN IVAR" ; echo "RUN VIRALCONSENSUS" ; rm -f *.fq *.bam */*.bam; done ; done
 ```

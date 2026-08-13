@@ -5,5 +5,5 @@ fi
 ref=$(basename "$1" | rev | cut -d'.' -f2- | rev)
 prefix=$(basename "$2" | cut -d'.' -f1-2)
 minimap2 -a -t 8 -x sr "$@" | samtools sort -@ 8 -o "$ref.bam" && \
-samtools mpileup -A -aa -d 0 -Q 0 --reference "$1" "$ref.bam" | ivar consensus -p "$ref.consensus.fas"
-rm -f "$ref.bam"
+samtools mpileup -A -aa -d 0 -Q 0 --reference "$1" "$ref.bam" | ivar consensus -p "$prefix.consensus.$ref.ivar.fas"
+rm -f *.bam
