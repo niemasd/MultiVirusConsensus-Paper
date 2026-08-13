@@ -1,9 +1,11 @@
 # Commands
 
+All of the following commands assume that they will be run from the `MultiVirusConsensus-Paper/benchmark/results` folder.
+
 ## Generate Datasets
 
 ```bash
-for x in 1 10 100 1000 ; do for r in $(seq -w 1 10) ; do art_illumina -ss HS25 -i references.fas -p -l 150 -f $x -m 200 -s 10 -o simulated.x$x.r$r. ; sleep 2 ; done ; done
+for x in 1 10 100 1000 ; do for r in $(seq -w 1 10) ; do art_illumina -ss HS25 -i data/references.fas -p -l 150 -f $x -m 200 -s 10 -o simulated.x$x.r$r. ; sleep 2 ; done ; done
 ```
 
 ## Run MultiVirusConsensus
