@@ -3,5 +3,7 @@ if (( $# < 2 )) ; then
     echo "USAGE: $0 <ref.fas> <reads1.fq> [reads2.fq] [...]" ; exit 1
 fi
 ref=$(basename "$1" | rev | cut -d'.' -f2- | rev)
-minimap2 -a -t 8 -x sr "$@" | samtools sort -@ 8 -o "$2.$ref.bam" && \
-samtools mpileup -A -aa -d 0 -Q 0 --reference "$1" "$2.$ref.bam" | ivar consensus -p "$2.$ref.consensus.fas"
+prefix=$(basename "$2" | cut -d'.' -f1-2)
+minimap2 -a -t 8 -x sr "$@" | samtools sort -@ 8 -o "$ref.bam" && \
+samtools mpileup -A -aa -d 0 -Q 0 --reference "$1" "$ref.bam" | ivar consensus -p "$ref.consensus.fas"
+rm -f "$ref.bam"
