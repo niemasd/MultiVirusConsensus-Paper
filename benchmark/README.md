@@ -23,7 +23,7 @@ art_illumina -na -ss HS25 -i ../data/references.fas -p -l 150 -f $x -m 200 -s 10
 ## Run iVar
 
 ```bash
-for s in $(ls *.fq.gz | cut -d'.' -f1-3 | sort | uniq) ; do for ref in ../references/*.fas ; do /usr/bin/time -v -o $s.time.ivar.$(echo $ref | rev | cut -d'/' -f1 | rev | cut -d'.' -f1).txt ../scripts/run_ivar.sh "$ref" $s.*.fq.gz ; done ; done
+../scripts/run_ivar.sh ../references/REFERENCE.fas FASTQS
 ```
 
 ## All Together
@@ -31,9 +31,9 @@ for s in $(ls *.fq.gz | cut -d'.' -f1-3 | sort | uniq) ; do for ref in ../refere
 The `sleep 2` is because `art_illumina` uses the system time as a RNG seed, so this ensures it'll be different each run.
 
 ```bash
-for x in 1 10 100 1000 ; do
+for x in 10 20 30 ; do
     echo "- Coverage: $x"
-    for r in $(seq -w 1 10) ; do
+    for r in $(seq -w 1 5) ; do
         echo "  - Replicate: $r"
         echo "    - Simulating Reads"
         art_illumina -na -ss HS25 -i ../data/references.fas -p -l 150 -f $x -m 200 -s 10 -o "x$x.r$r." > /dev/null 2>&1 && sleep 2
