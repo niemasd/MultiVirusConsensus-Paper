@@ -1,5 +1,6 @@
 # paper-related files
 *.bam
+*.fai
 *.fastq
 *.fastq.*
 *.fq
