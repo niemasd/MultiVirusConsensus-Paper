@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 '''
-Create benchmark figures
+Create benchmark figures. Merge with: pdfjam --nup 1x3 time.pdf memory.pdf accuracy.pdf --outfile Fig1.pdf
 '''
 
 # imports
@@ -104,7 +104,9 @@ if __name__ == "__main__":
     # create figures
     for plot in ['time', 'memory', 'accuracy']:
         print(f"Creating Figure: {plot}")
-        fig, ax = plt.subplots(figsize=(10,5)); handles = list()
+        fig, ax = plt.subplots(figsize=(10,5))
+        fig.subplots_adjust(left=0.1, right=0.98, bottom=0.15, top=0.95)
+        handles = list()
         for tool in ['ivar', 'viral_consensus', 'mvc']:
             handles.append(Line2D([0],[0],color=COLOR[tool],label=TRANSLATE[tool],linewidth=1.5,linestyle=LINESTYLE[tool]))
             x = list(); y = list()
@@ -115,10 +117,10 @@ if __name__ == "__main__":
                         x += [cov]*len(curr_y); y += curr_y
                     else:
                         x.append(cov); y.append(curr_y)
-            pointplot(x=x, y=y, color=COLOR[tool], linestyles=LINESTYLE[tool])
+            pointplot(ax=ax, x=x, y=y, color=COLOR[tool], linestyles=LINESTYLE[tool])
         plt.xlabel('Coverage')
         plt.ylabel(TRANSLATE[plot])
         if plot in {'time', 'memory'}:
             ax.set_yscale('log')
         plt.legend(handles=handles,bbox_to_anchor=(0.005, 0.995), loc=2, borderaxespad=0., frameon=True)
-        fig.savefig(FIG_PATH / f'{plot}.pdf', format='pdf', bbox_inches='tight')
+        fig.savefig(FIG_PATH / f'{plot}.pdf', format='pdf')
