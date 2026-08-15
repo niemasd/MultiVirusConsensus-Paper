@@ -1,18 +1,18 @@
 	Command being timed: "../scripts/run_ivar.sh ../references/JX443703.1.fas x30.r1.1.fq x30.r1.2.fq"
-	User time (seconds): 44.94
-	System time (seconds): 1.80
-	Percent of CPU this job got: 644%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.25
+	User time (seconds): 60.08
+	System time (seconds): 3.98
+	Percent of CPU this job got: 645%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.93
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 309156
+	Maximum resident set size (kbytes): 309340
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 164008
-	Voluntary context switches: 36127
-	Involuntary context switches: 15608
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 161356
+	Voluntary context switches: 31932
+	Involuntary context switches: 8776
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 144232

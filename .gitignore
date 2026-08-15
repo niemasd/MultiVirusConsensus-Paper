@@ -5,6 +5,7 @@
 *.fastq.*
 *.fq
 *.fq.gz
+*.qual.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

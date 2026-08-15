@@ -1,21 +1,21 @@
 	Command being timed: "../scripts/run_ivar.sh ../references/AF255364.1.fas x30.r5.1.fq x30.r5.2.fq"
-	User time (seconds): 42.22
-	System time (seconds): 1.68
-	Percent of CPU this job got: 723%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.07
+	User time (seconds): 36.47
+	System time (seconds): 1.38
+	Percent of CPU this job got: 638%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.93
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 309128
+	Maximum resident set size (kbytes): 309216
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 1
-	Minor (reclaiming a frame) page faults: 163688
-	Voluntary context switches: 31335
-	Involuntary context switches: 13350
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 163383
+	Voluntary context switches: 32894
+	Involuntary context switches: 12976
 	Swaps: 0
 	File system inputs: 0
-	File system outputs: 144272
+	File system outputs: 144304
 	Socket messages sent: 0
 	Socket messages received: 0
 	Signals delivered: 0

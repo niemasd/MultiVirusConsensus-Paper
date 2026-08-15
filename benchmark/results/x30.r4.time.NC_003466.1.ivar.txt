@@ -1,18 +1,18 @@
 	Command being timed: "../scripts/run_ivar.sh ../references/NC_003466.1.fas x30.r4.1.fq x30.r4.2.fq"
-	User time (seconds): 40.65
-	System time (seconds): 1.62
-	Percent of CPU this job got: 717%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.89
+	User time (seconds): 34.67
+	System time (seconds): 1.33
+	Percent of CPU this job got: 644%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.58
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 309356
+	Maximum resident set size (kbytes): 309312
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 162900
-	Voluntary context switches: 36202
-	Involuntary context switches: 14696
+	Minor (reclaiming a frame) page faults: 163489
+	Voluntary context switches: 38275
+	Involuntary context switches: 14161
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 144224

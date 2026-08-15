@@ -1,18 +1,18 @@
 	Command being timed: "../scripts/run_ivar.sh ../references/CY181516.1.fas x20.r1.1.fq x20.r1.2.fq"
-	User time (seconds): 31.03
-	System time (seconds): 1.15
-	Percent of CPU this job got: 683%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.71
+	User time (seconds): 27.45
+	System time (seconds): 1.08
+	Percent of CPU this job got: 607%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.69
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 219676
+	Maximum resident set size (kbytes): 217692
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 110297
-	Voluntary context switches: 26106
-	Involuntary context switches: 11857
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 111639
+	Voluntary context switches: 24380
+	Involuntary context switches: 9134
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 96472
