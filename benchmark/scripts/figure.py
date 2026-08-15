@@ -4,11 +4,13 @@ Create benchmark figures
 '''
 
 # imports
-from matplotlib import rcParams
+from matplotlib import rcParams, use
 from matplotlib.lines import Line2D
 from pathlib import Path
 from seaborn import pointplot, set_context, set_style
+from tqdm import tqdm
 import matplotlib.pyplot as plt
+use('Agg')
 
 # constants
 RESULTS_PATH = Path(__file__).parent.parent / 'results'
@@ -51,14 +53,15 @@ if __name__ == "__main__":
     # parse benchmark results data
     data = dict() # data[coverage][replicate][tool]['time/mem'] = value
     tools = set()
-    for p in RESULTS_PATH.glob('simulated.x*.r*.time.*.txt'):
-        cov = int(p.name.split('.')[1].lstrip('x'))
+    print("Parsing /usr/bin/time outputs...")
+    for p in tqdm(list(RESULTS_PATH.glob('x*.r*.time.*.txt'))):
+        cov = int(p.name.split('.')[0].lstrip('x'))
         if cov not in data:
             data[cov] = dict()
-        rep = int(p.name.split('.')[2].lstrip('r'))
+        rep = int(p.name.split('.')[1].lstrip('r'))
         if rep not in data[cov]:
             data[cov][rep] = dict()
-        tool = p.name.split('.')[4].strip()
+        tool = p.name.split('.')[-2].strip()
         if tool not in data[cov][rep]:
             data[cov][rep][tool] = {'time':0, 'mem':0}
         tools.add(tool)
@@ -73,6 +76,7 @@ if __name__ == "__main__":
 
     # create figures
     for plot in ['time', 'mem']:
+        print(f"Creating Figure: {plot}")
         fig, ax = plt.subplots(figsize=(10,5)); handles = list()
         for tool in ['ivar', 'viral_consensus', 'mvc']:
             handles.append(Line2D([0],[0],color=COLOR[tool],label=TRANSLATE[tool],linewidth=1.5,linestyle=LINESTYLE[tool]))
