@@ -118,6 +118,7 @@ if __name__ == "__main__":
             pointplot(x=x, y=y, color=COLOR[tool], linestyles=LINESTYLE[tool])
         plt.xlabel('Coverage')
         plt.ylabel(TRANSLATE[plot])
-        ax.set_yscale('log')
+        if plot in {'time', 'memory'}:
+            ax.set_yscale('log')
         plt.legend(handles=handles,bbox_to_anchor=(0.005, 0.995), loc=2, borderaxespad=0., frameon=True)
         fig.savefig(FIG_PATH / f'{plot}.pdf', format='pdf', bbox_inches='tight')
